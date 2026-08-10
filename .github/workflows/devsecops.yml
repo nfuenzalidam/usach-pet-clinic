@@ -26,12 +26,12 @@ jobs:
           cache: maven
 
       - name: Build and test
-        run: mvn -B verify
-        
+        run: mvn -q verify
+
       - name: SonarCloud analysis
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         run: >
-          ./mvnw -B sonar:sonar
+          mvn -B sonar:sonar
           -Dsonar.organization=${{ vars.SONAR_ORGANIZATION }}
           -Dsonar.projectKey=${{ vars.SONAR_PROJECT_KEY }}
