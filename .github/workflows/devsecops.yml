@@ -1,1 +1,19 @@
+name: DevSecOps
 
+on:
+  workflow_call:
+  push: 
+permissions:
+  security-events: write
+  packages: read
+  actions: read
+  contents: read
+jobs:
+
+  Build:
+    runs-on: ubuntu-latest
+    name: Build
+    steps:   
+    
+      - name: Git Clone
+        uses: actions/checkout@v4
