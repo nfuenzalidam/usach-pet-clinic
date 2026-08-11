@@ -9,7 +9,7 @@ permissions:
 jobs:
 
   SAST:
-    name: SAST
+    name: SASTT
     runs-on: ubuntu-latest
 
     steps:
@@ -35,7 +35,6 @@ jobs:
           -Dsonar.organization=${{ vars.SONAR_ORGANIZATION }}
           -Dsonar.projectKey=${{ vars.SONAR_PROJECT_KEY }}
           -Dsonar.qualitygate.wait=true
-
 
   SCA:
     name: SCA
