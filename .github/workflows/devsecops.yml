@@ -46,7 +46,7 @@ jobs:
       scan-args: |-
         --recursive
         ./
-      fail-on-vuln: false
+      fail-on-vuln: true
     permissions:
       security-events: write
       contents: read
