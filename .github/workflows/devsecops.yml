@@ -9,7 +9,7 @@ permissions:
 jobs:
 
   SAST:
-    name: SASTT
+    name: SAST
     runs-on: ubuntu-latest
 
     steps:
