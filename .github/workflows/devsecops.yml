@@ -72,7 +72,7 @@ jobs:
   #         -Dformat=HTML
   #         -DoutputDirectory=dependency-check-report
 
-    DOCKER:
+  DOCKER:
     name: Docker Build
     #needs: SCA
     runs-on: ubuntu-latest
